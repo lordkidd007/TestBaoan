@@ -1,0 +1,142 @@
+<html>
+
+<head>
+	<title>XCK</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script src="https://cdn.staticfile.org/vue/2.7.0/vue.min.js"></script>
+	<style>
+		.tihuan {
+			background-color: #fff;
+			font-size: 3em;
+			/* color: #a7a6a7; */
+			text-align: center;
+			/* line-height: 108px; */
+
+		}
+	</style>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+	<!-- Save for Web Slices (XCK.jpg) -->
+	<table id="__01" width="1220" height="2713" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td colspan="7">
+				<img src="images/XCK_01.gif" width="1220" height="740" alt="">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" rowspan="2">
+				<img src="images/XCK_02.gif" width="460" height="132" alt="">
+			</td>
+			<td colspan="3">
+				<!-- 时间 -->
+				<div class="tihuan" id="time" style="height:88 ;width:500;line-height: 88px; color: #ccc;">{{ timeValue
+					}}</div>
+				<!-- <img src="images/XCK_03.gif" width="500" height="88" alt=""> -->
+			</td>
+			<td colspan="2" rowspan="4">
+				<img src="images/XCK_04.gif" width="260" height="768" alt="">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<img src="images/XCK_05.gif" width="500" height="44" alt="">
+			</td>
+		</tr>
+		<tr>
+			<td rowspan="4">
+				<img src="images/XCK_06.gif" width="288" height="1840" alt="">
+			</td>
+			<td colspan="3">
+				<img src="images/XCK_07.gif" width="620" height="552" alt="">
+			</td>
+			<td rowspan="2">
+				<img src="images/XCK_08.gif" width="52" height="636" alt="">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<img src="images/XCK_09.gif" width="620" height="84" alt="">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" rowspan="2">
+				<img src="images/XCK_10.gif" width="380" height="1204" alt="">
+			</td>
+			<td colspan="3">
+				<!-- 地区 -->
+				<div class="tihuan" id="time" style="height:108 ;width:356;line-height: 108px;">吉林省长春市</div>
+				<!-- <img src="images/XCK_11.gif" width="356" height="108" alt=""> -->
+			</td>
+			<td rowspan="2">
+				<img src="images/XCK_12.gif" width="196" height="1204" alt="">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<img src="images/XCK_13.gif" width="356" height="1096" alt="">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="288" height="1" alt="">
+			</td>
+			<td>
+				<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="172" height="1" alt="">
+			</td>
+			<td>
+				<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="208" height="1" alt="">
+			</td>
+			<td>
+				<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="240" height="1" alt="">
+			</td>
+			<td>
+				<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="52" height="1" alt="">
+			</td>
+			<td>
+				<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="64" height="1" alt="">
+			</td>
+			<td>
+				<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="196" height="1" alt="">
+			</td>
+		</tr>
+	</table>
+	<!-- End Save for Web Slices -->
+	<script>
+		function GetTime() {
+			var date = new Date();
+			var seperator1 = ".";
+			var year = date.getFullYear();
+			var month = date.getMonth() + 1;
+			var strDate = date.getDate();
+			var strH = date.getHours();
+			var strM = date.getMinutes();
+			var strS = date.getSeconds();
+			if (month >= 1 && month <= 9) {
+				month = "0" + month;
+			}
+			if (strDate >= 0 && strDate <= 9) {
+				strDate = "0" + strDate;
+			}
+			if (strH >= 1 && strH <= 9) {
+				strH = "0" + strH;
+			}
+			if (strM >= 1 && strM <= 9) {
+				strM = "0" + strM;
+			}
+			if (strS >= 1 && strS <= 9) {
+				strS = "0" + strS;
+			}
+			var currentdate = year + seperator1 + month + seperator1 + strDate + ' ' + strH + ":" + strM + ":" + strS;
+			return currentdate;
+		};
+		new Vue({
+			el: '#time',
+			data: {
+				timeValue: GetTime()
+			}
+		})
+	</script>
+</body>
+
+</html>
