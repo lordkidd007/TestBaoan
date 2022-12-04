@@ -297,17 +297,17 @@
 			}
 			if(strS <0.001)
 			{
-				var strH = date.getHours();
-			var strM = date.getMinutes();
-			if (strH >= 0 && strH <= 9) {
-				strH = "0" + strH;
-			}
-			if (strM >= 0 && strM <= 9) {
-				strM = "0" + strM;
-			}
+				var strH = dt.getHours();
+				var strM = dt.getMinutes();
+				if (strH >= 0 && strH <= 9) {
+					strH = "0" + strH;
+				}
+				if (strM >= 0 && strM <= 9) {
+					strM = "0" + strM;
+				}
 
-			let strHour = strH + ':' + strM + ':';
-				document.querySelector(".UpdateHour").innerHTML =  strHour;
+				let strHour = strH + ':' + strM + ':';
+					document.querySelector(".UpdateHour").innerHTML =  strHour;
 			}
 			document.querySelector(".TimeUpdate").innerHTML =  strS;
 			t = setTimeout(time, 1000); //设定定时器，循环运行
