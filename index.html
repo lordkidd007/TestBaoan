@@ -29,7 +29,7 @@
 			</td>
 			<td colspan="3" rowspan="2">
 				<!-- <img src="images/Dev_05.png" width="286" height="124" alt=""> -->
-				<div style="background-image: url(images/Dev_05.png); width: 286; height:124; color: #7eace8; font-size: 6.2em;"> {{strHoursMinutes}}</div>
+				<div class="UpdateHour" style="background-image: url(images/Dev_05.png); width: 286; height:124; color: #7eace8; font-size: 6.2em;"> {{strHoursMinutes}}</div>
 			</td>
 			<td rowspan="2">
 				<!-- <img src="images/Dev_06.png" width="139" height="124" alt=""> -->
@@ -294,6 +294,20 @@
 
 			if (strS >= 0 && strS <= 9) {
 				strS = "0" + strS;
+			}
+			if(strS <0.001)
+			{
+				var strH = date.getHours();
+			var strM = date.getMinutes();
+			if (strH >= 0 && strH <= 9) {
+				strH = "0" + strH;
+			}
+			if (strM >= 0 && strM <= 9) {
+				strM = "0" + strM;
+			}
+
+			let strHour = strH + ':' + strM + ':';
+				document.querySelector(".UpdateHour").innerHTML =  strHour;
 			}
 			document.querySelector(".TimeUpdate").innerHTML =  strS;
 			t = setTimeout(time, 1000); //设定定时器，循环运行
